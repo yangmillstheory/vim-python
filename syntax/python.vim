@@ -145,7 +145,7 @@ endif
 
     syn cluster pythonIdentifier            contains=pythonName,pythonCallable,pythonIndexable,pythonBoolean,pythonBuiltinObj,pythonBuiltinFunc
 
-    syn cluster pythonNumeric               contains=pythonNumber,pythonHexNumber,pythonOctNumber,pythonBinNumber,pythonNumberError,pythonNameError
+    syn cluster pythonNumeric               contains=pythonNumber,pythonHexNumber,pythonOctNumber,pythonBinNumber,pythonNumberError
 
 " }}}
 
@@ -215,8 +215,6 @@ endif
     syn region  pythonArgs              matchgroup=pythonBrackets start=+(+ end=+)+ contains=@pythonData,pythonKwarg contained
     syn region  pythonBlockArgs         matchgroup=pythonBrackets start=+(+ end=+)+ contains=@pythonData,pythonKwarg nextgroup=pythonBody skipwhite contained
     "syn region  pythonBody              start=+:\zs$+ end=+^\ze\S+ contains=ALLBUT,@pythonNotTop contained fold
-
-    syn match   pythonNameError         "\<.*\D\d*\.\d.*\>" display
 
 " }}}
 
