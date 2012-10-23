@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     Python
 " Maintainer:   Edward Liaw <ed dot liaw at gmail dot com>
-" URL:          https://github.com/edliaw/vim-config
-" Last Change:  2012-10-14
+" URL:          https://github.com/edliaw/vim-python
+" Last Change:  2012-10-23
 " Filenames:    *.py
 " Version:      0.1
 " ----------------------------------------------------------------------------
