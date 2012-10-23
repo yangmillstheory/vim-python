@@ -136,7 +136,7 @@ endif
 " Clusters {{{
 " ============
 
-    syn cluster pythonNotTop                contains=@pythonQuotedSpecial,pythonDotOperator,pythonColonOperator,pythonDecorName,pythonKwarg,pythonTodo
+    syn cluster pythonNotTop                contains=@pythonQuotedSpecial,pythonTodo,pythonDotOperator,pythonColonOperator,pythonIndices,pythonFunction,pythonClass,pythonDecorName,pythonKwarg,pythonArgs,pythonBlockArgs,pythonBody
     syn cluster pythonData                  contains=@pythonNumeric,@pythonQuoted,@pythonIdentifier,pythonBracketed
     syn cluster pythonInterior              contains=@pythonData,pythonConditional,pythonRepeat,pythonOperator
 
