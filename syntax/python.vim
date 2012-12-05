@@ -212,7 +212,7 @@ endif
 
     " Blocks
     syn match   pythonKwarg             "\<\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\ze\s*=" display contains=pythonDotOperator contained
-    syn region  pythonArgs              matchgroup=pythonBrackets start=+(+ end=+)+ contains=@pythonData,pythonKwarg contained
+    syn region  pythonArgs              matchgroup=pythonBrackets start=+(+ end=+)+ contains=@pythonInterior,pythonKwarg contained
     syn region  pythonBlockArgs         matchgroup=pythonBrackets start=+(+ end=+)+ contains=@pythonData,pythonKwarg nextgroup=pythonBody skipwhite contained
     "syn region  pythonBody              start=+:\zs$+ end=+^\ze\S+ contains=ALLBUT,@pythonNotTop contained fold
 
