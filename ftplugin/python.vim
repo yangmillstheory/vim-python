@@ -7,9 +7,9 @@ setlocal textwidth=80
 setlocal formatoptions=cq
 setlocal wrapmargin=0
 if exists('+colorcolumn')
-	setlocal colorcolumn=81
+  setlocal colorcolumn=81
 else
-	autocmd BufEnter <buffer> match ColorColumn /\%81v.*/
+  autocmd BufEnter <buffer> match ColorColumn /\%81v.*/
 endif
 "let python_highlight_py2=1
 let python_highlight_common=1
