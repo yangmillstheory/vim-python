@@ -506,14 +506,15 @@ endif
     hi def link  pythonOperator                 Operator
     hi def link  pythonException                Exception
     hi def link  pythonPreProc                  PreProc
-    hi def link  pythonDefine                   Define
+    hi def link  pythonDefine                   Statement
 
     hi def link  pythonDelimiter                Delimiter
 
     hi def link  pythonName                     Normal
     hi def link  pythonBracketed                NONE
-    hi def link  pythonFunction                 Function
-    hi def link  pythonClass                    Structure
+    hi def link  pythonCallable                 Function
+    hi def link  pythonFunction                 Tag
+    hi def link  pythonClass                    Tag
     hi def link  pythonKwarg                    Identifier
 
     hi def link  pythonQuoted                   String
@@ -532,13 +533,12 @@ endif
     hi def link  pythonColonOperator            pythonOperator
 
     hi def link  pythonIndexable                pythonName
-    hi def link  pythonCallable                 pythonFunction
     hi def link  pythonBrackets                 pythonDelimiter
     hi def link  pythonArgs                     pythonBracketed
     hi def link  pythonBlockArgs                pythonArgs
 
     hi def link  pythonDecorator                pythonDelimiter
-    hi def link  pythonDecorName                pythonFunction
+    hi def link  pythonDecorName                pythonCallable
 
     hi def link  pythonString                   pythonQuoted
     hi def link  pythonRawString                pythonQuoted
@@ -580,7 +580,7 @@ endif
     hi def link  pythonBinError                 pythonError
 
     hi def link  pythonBuiltinObj               pythonClass
-    hi def link  pythonBuiltinFunc              pythonFunction
+    hi def link  pythonBuiltinFunc              pythonCallable
     hi def link  pythonExClass                  pythonClass
 
     hi def link  pythonNameError                pythonError
