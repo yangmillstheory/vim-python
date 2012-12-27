@@ -511,11 +511,13 @@ endif
     hi def link  pythonDelimiter                Delimiter
 
     hi def link  pythonName                     Normal
+    hi def link  pythonCallable                 Normal
     hi def link  pythonBracketed                NONE
-    hi def link  pythonCallable                 Function
-    hi def link  pythonFunction                 Tag
-    hi def link  pythonClass                    Tag
-    hi def link  pythonKwarg                    Identifier
+    hi def link  pythonFunction                 Function
+    hi def link  pythonClass                    Typedef
+    hi def link  pythonKwarg                    NONE
+    hi def link  pythonBuiltinObj               Identifier
+    hi def link  pythonBuiltinFunc              Identifier
 
     hi def link  pythonQuoted                   String
     hi def link  pythonRegexBracketed           NONE
@@ -579,9 +581,7 @@ endif
     hi def link  pythonHexError                 pythonError
     hi def link  pythonBinError                 pythonError
 
-    hi def link  pythonBuiltinObj               pythonClass
-    hi def link  pythonBuiltinFunc              pythonCallable
-    hi def link  pythonExClass                  pythonClass
+    hi def link  pythonExClass                  pythonBuiltinObj
 
     hi def link  pythonNameError                pythonError
     hi def link  pythonIndentError              pythonError
