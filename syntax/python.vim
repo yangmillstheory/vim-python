@@ -138,7 +138,7 @@ endif
 
     syn cluster pythonNotTop                contains=@pythonQuotedSpecial,pythonTodo,pythonDotOperator,pythonColonOperator,pythonIndices,pythonFunction,pythonClass,pythonDecorName,pythonKwarg,pythonArgs,pythonBlockArgs,pythonBody
     syn cluster pythonData                  contains=@pythonNumeric,@pythonQuoted,@pythonIdentifier,pythonBracketed
-    syn cluster pythonInterior              contains=@pythonData,pythonConditional,pythonRepeat,pythonOperator
+    syn cluster pythonInterior              contains=@pythonData,pythonConditional,pythonRepeat,pythonOperator,pythonComment
 
     syn cluster pythonQuoted                contains=pythonString,pythonRawString,pythonBytes
     syn cluster pythonQuotedSpecial         contains=@pythonStringSpecial,@pythonRawStringSpecial,@pythonBytesSpecial,@pythonRegexSpecial,pythonRegexSet,pythonRegexSetEscape,pythonBytesEscape,pythonBytesEscapeError,pythonDocTest,pythonDocTest2
