@@ -408,7 +408,7 @@ endif
     endif
 
     " Snakemake
-    syn keyword snakeStatement          input output message threads run shell
+    syn keyword snakeStatement          input params output message threads run resources shell
     syn keyword snakePreProc            include workdir
     syn keyword snakeDefine             rule
 
