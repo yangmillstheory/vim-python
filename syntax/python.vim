@@ -224,7 +224,7 @@ endif
 
     syn match   pythonDecorator         "@" display nextgroup=pythonDecorName skipwhite
     syn match   pythonDecorName         "\<\%(\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\.\)*\zs\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\>" display contains=pythonDotOperator contained
-    
+
 " }}}
 
 
@@ -329,7 +329,7 @@ endif
         syn region  pythonDocTest       start="^\s*>>>" end=+'''+he=s-1 end="^\s*$" contained
         syn region  pythonDocTest2      start="^\s*>>>" end=+"""+he=s-1 end="^\s*$" contained
     endif
-    
+
 " }}}
 
 
@@ -378,33 +378,14 @@ endif
 
     " Built-in functions
     if exists("python_highlight_builtin_funcs")
-        syn keyword pythonBuiltinFunc           __import__ abs all any
-                                                \ bin bool bytearray
-                                                \ callable chr classmethod compile complex
-                                                \ delattr dict dir divmod
-                                                \ enumerate eval
-                                                \ filter float format frozenset
-                                                \ getattr globals hasattr hash hex
-                                                \ id input int isinstance issubclass iter
-                                                \ len list locals
-                                                \ map max min next
-                                                \ object oct open ord pow property
-                                                \ range repr reversed round
-                                                \ set setattr slice sorted
-                                                \ staticmethod str sum super
-                                                \ tuple type vars zip
-                                                \ nextgroup=pythonArgs skipwhite
-
-        if exists("python_highlight_py2")
-            syn keyword pythonBuiltinFunc       apply basestring buffer cmp coerce
-                                                \ execfile file intern long
-                                                \ raw_input reduce reload
-                                                \ unichr unicode vars xrange
-                                                \ nextgroup=pythonArgs skipwhite
-        else
-            syn keyword pythonBuiltinFunc       ascii bytes exec print memoryview
-                                                \ nextgroup=pythonArgs skipwhite
-        endif
+      let s:funcs_re = '__import__|abs|all|any|bin|callable|chr|classmethod|compile|complex|delattr|dir|divmod|enumerate|eval|filter|format|getattr|globals|hasattr|hash|help|hex|id|input|isinstance|issubclass|iter|len|locals|map|max|memoryview|min|next|oct|open|ord|pow|property|range|repr|reversed|round|setattr|slice|sorted|staticmethod|sum|super|type|vars|zip'
+      let s:funcs_re .= '|apply|basestring|buffer|cmp|coerce|execfile|file|intern|long|raw_input|reduce|reload|unichr|unicode|xrange'
+      let s:funcs_re .= '|print'
+      let s:funcs_re .= '|ascii|exec|print'
+      let s:funcs_re = 'syn match pythonBuiltinFunc ''\v\.@<!\zs<%(' . s:funcs_re . ')>'
+      let s:funcs_re .= '\=@!'
+      execute s:funcs_re . ''''
+      unlet s:funcs_re
     endif
 
     " Built-in exceptions and warnings
