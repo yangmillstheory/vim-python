@@ -373,7 +373,7 @@ endif
         syn keyword pythonBoolean       True False
         syn keyword pythonBuiltinObj    Ellipsis None NotImplemented
         syn keyword pythonBuiltinObj    __debug__ __doc__ __file__ __name__ __package__
-        syn keyword pythonBuiltinObj    self
+        syn keyword pythonBuiltinObj    self cls
     endif
 
     " Built-in functions
